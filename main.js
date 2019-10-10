@@ -28,4 +28,23 @@ const steak = {
 const foods = [hamburger, zucchini, chickenBreast, corn, steak];
 
 // An empty array that will store the objects after the `grill()` function cooks the food.
-const cookedFood = [];
+let cookedFood = [];
+
+function grill (currentObject) {
+    // Modify the food so that it is cooked
+    currentObject.cooked = true;
+
+    // Put the cooked food into the appropriate array
+    cookedFood.push(currentObject);
+};
+
+foods.forEach(function(food) {
+grill(food);
+})
+
+
+
+console.log(cookedFood);
+
+
+
